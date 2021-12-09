@@ -95,13 +95,13 @@ public:
 			{G[0], 'G'},
 		};
 
-		int sum = 0;
+		string output_digits = "";
 		for (string output : outputs)
 		{
-			sum += decode_item(decoder, output);
+			output_digits += to_string(decode_item(decoder, output));
 		}
 
-		return sum;
+		return stoi(output_digits);
 	}
 	
 	int decode_item(const map<char, char>& decoder, string item)
@@ -109,7 +109,7 @@ public:
 		vector<char> segments;
 		for (char c : item)
 		{
-			segments.push_back(decoder.find(c)->first);
+			segments.push_back(decoder.find(c)->second);
 		}
 		sort(begin(segments), end(segments));
 

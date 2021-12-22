@@ -11,7 +11,7 @@ using namespace std;
 static const int MAX_DAY = 255;
 static const int DAY_VECTOR_SIZE = MAX_DAY + 20;
 
-struct day
+struct day 
 {
 	uint64_t zeroes{ 0 };
 	uint64_t eights{ 0 };
